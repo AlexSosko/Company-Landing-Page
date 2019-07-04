@@ -1,24 +1,29 @@
 * {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
     display: inline-block;
 }
-ul, li {
+
+ul,
+li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 .container {
     /* чтоб контейнер не был болше 1170 пикс в ширину  */
-    max-width: 1170px;     
+    max-width: 1170px;
     /* это выравниваем по центру */
     margin: 0 auto;
     /* это чтоб на таблетках не прилипал к краю экран
     которые меньше  1170 пикс*/
     padding: 0 15px;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'PT Serif', serif;
@@ -27,12 +32,15 @@ body {
     line-height: 18px;
     color: #5e5e5e;
 }
+
 header {
     font-family: 'Roboto', sans-serif;
 }
+
 .header__top {
     background-color: #303030;
 }
+
 .header__btn {
     float: right;
     line-height: 36px;
@@ -42,18 +50,21 @@ header {
     padding: 5px 20px 4px 50px;
     position: relative;
 }
+
 .header__btn:before {
-    content: "\f0b1"; 
+    content: "\f0b1";
     font-family: 'icomoon';
     position: absolute;
     left: 22px;
     color: #1b1b1b;
 }
+
 .header__contacts:after {
     content: '';
     clear: both;
     display: block;
 }
+
 .header__phone,
 .header__e-mail {
     line-height: 24px;
@@ -62,10 +73,12 @@ header {
     line-height: 45px;
     position: relative;
 }
+
 .header__phone {
     padding-left: 20px;
     padding-right: 30px;
 }
+
 .header__phone:before {
     content: "\f095";
     font-family: 'icomoon';
@@ -73,9 +86,11 @@ header {
     left: 0;
     color: #ffc222;
 }
+
 .header__e-mail {
     padding-left: 24px;
 }
+
 .header__e-mail:before {
     content: "\f003";
     font-family: 'icomoon';
@@ -83,16 +98,20 @@ header {
     left: 0;
     color: #ffc222;
 }
+
 .header__content {
     padding: 34px 0px 23px;
 }
+
 .menu li {
     display: inline-block;
 }
+
 .header__content-inner {
     display: flex;
     justify-content: space-between;
 }
+
 .menu a {
     font-size: 16px;
     line-height: 36px;
@@ -102,9 +121,71 @@ header {
     padding-right: 16px;
     transition: all 3s;
 }
+
 .menu a:hover {
     border-color: #ffc222;
 }
-.menu li + li {
+
+.menu li+li {
     padding-left: 10px;
+}
+
+#modal {
+    display: none;
+}
+
+.slider {
+    background-image: url(../img/slider_fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+
+.slider__item-content {
+    text-align: center;
+    padding-top: 110px;
+    margin: 0 auto;
+    max-width: 665px;
+}
+
+.slider__title {
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 22px;
+}
+
+.slider__text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #d3d2d2;
+    margin-bottom: 50px;
+}
+
+.default-btn {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: 1px solid #ffc222;
+    border-right-width: 20px;
+    position: relative;
+}
+.default-btn::before {
+    content: "\f105";
+    font-family: 'icomoon';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
 }
