@@ -166,7 +166,6 @@ header {
     color: #d3d2d2;
     margin-bottom: 50px;
 }
-
 .default-btn {
     display: inline-block;
     font-size: 14px;
@@ -212,8 +211,6 @@ header {
     transform: translate( -50% , -50%);
     font-family: 'icomoon';
     color: #ffffff;
-
-
 }
 .slick-btn.slick-disabled {
     cursor: default;
@@ -231,20 +228,22 @@ header {
 .slick-next:before {
     content:"\f105";
 }
-.about {
+.services {
     padding: 50px 0 30px;
 }
-.about__top {
+.services__top {
     display: flex;
     justify-content: space-between ;
     margin-bottom: 60px;
 }
-.about__title-box {
+.services__title-box,
+.form__title-box {
     width: 520px;
     padding-left: 140px;
     position: relative;
 }
-.about__title-box:before {
+.services__title-box:before,
+.form__title-box:before {
     content: "";
     width: 100px;
     height: 2px;
@@ -253,7 +252,8 @@ header {
     left: 0;
     top: 11px;
 }
-.about-title {
+.services__title,
+.form__title {
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
@@ -261,10 +261,11 @@ header {
     color: #212020;
     margin-bottom: 10px;
 }
-.about__text {
+.services__text,
+.form__text {
     letter-spacing: 0.1px;
 }
-.about__btn a {
+.services__btn a {
     line-height: 24px;
     letter-spacing: 0.25px;
     font-family: 'Roboto', sans-serif;
@@ -273,12 +274,12 @@ header {
     border: 3px solid #e6e6e6;
     padding: 5px 38px
 }
-.about__items {
+.services__items {
     display: flex;
     justify-content: space-between;
    
 }
-.about__item {
+.services__item {
     width: 360px;
     text-align: center;
     /* border:1px solid red; */
@@ -288,7 +289,7 @@ header {
     background-color: #f9f9f9;
     box-shadow: 3.5px 6.062px 24.3px 2.7px rgba(91, 89, 89, 0.14);
 }
-.about__item-title {
+.services__item-title {
     font-size: 18px;
     line-height: 24px;
     font-family: 'Roboto', sans-serif;
@@ -297,20 +298,20 @@ header {
     letter-spacing: 0.1px;
     padding: 24px 0;
 }
-.about__item-text {
+.services__item-text {
     letter-spacing: 0.1px;
     padding: 0 30px 30px;
 }
-.about__item-btn {
+.services__item-btn {
     position: absolute;
     bottom: 40px;
     left: 0;
     right: 0;    
 }
-.about__item-btn .default-btn {
+.services__item-btn .default-btn {
     color: #373636;
 }
-.about__item-link {
+.services__item-link {
   color: #050505; 
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -319,15 +320,166 @@ header {
   line-height: 15px; 
   margin-right: 60px;
 }
-/* 
-.Прямоугольник_32_копия_2 {
-    background-color: rgb(249, 249, 249);
-    box-shadow: 3.5px 6.062px 24.3px 2.7px rgba(91, 89, 89, 0.14);
+.about {
+    background-image: url(../img/about_fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px; 
+    padding: 35px 0 45px;  
+}
+.about__inner {
+    max-width: 540px;
+    padding: 0 15px;
+}
+.about__title {
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.about__text {
+    
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    color: #d3d2d2;
+}
+.about__btn {
+    margin-top: 35px;
+}
+.about__btn.default-btn::before,
+.form__box-left .default-btn::before {
+    color: #303030;
+}
+.form {
+    padding-top: 40px;
+} 
+.form__inner {
+    background-image: url(../img/form_fon.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    min-height: 459px;
+    padding-bottom: 40px;
+}
+.form__box {
+    max-width: 850px;
+}
+.form__box-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.form__box-right {
+    max-width: 263px;
+    width: 100%;
+}
+.form__box-left {
+    max-width: 555px;
+    width: 100%;
+}
+.form__box-inner input,
+.form__box-inner label,
+.form__box-inner select,
+.form__box-inner textarea {
+    display: block;
+    width: 100%;
+    outline: none;
+}
+.form__box-inner label {
+  font-size: 14px;         
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  line-height: 36px; 
+  color: #282828;  
+}
+.form__box-inner input {
+    margin-bottom: 2px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #e6e6e6;    
+}
+.form__box-inner .jq-selectbox.jqselect {
+    display: block;
+    width: 100%;
+    outline: none;    
+}
+.form__box-inner .jq-selectbox__select {
+    margin-bottom: 8px;
+    height: 40px;
+    padding-left: 15px;
+    border: 1px solid #e6e6e6;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+.form__box-inner .jq-selectbox__trigger-arrow:before {
+    content: "\f105";
+    font-family: 'icomoon';
     position: absolute;
-    left: 1170px;
-    top: 846px;
-    width: 360px;
-    height: 365px;
-    z-index: 97;
-  } */
-  
+    right: 17px;
+    top: 0px;
+    transform: rotate(90deg);
+    /* color: #ffffff; */
+}
+.form__box-inner .jq-selectbox__dropdown {	
+	width: 100%;
+	margin: 2px 0 0;	
+	border: 1px solid #e6e6e6;
+	border-radius: 0px;
+	background: #FFF;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);    
+}
+.form__box-inner .jq-selectbox li {
+	min-height: 18px;
+	padding: 5px 15px 6px;
+	color: #231F20;
+}
+.form__box-inner .jq-selectbox li.selected {
+	background-color: #A3ABB1;
+	color: #FFF;
+}
+.form__box-inner .jq-selectbox li:hover {
+	background-color: #ffc222;
+	color: #FFF;
+}
+.form__box-inner .jq-selectbox li.disabled {
+	color: #AAA;
+}
+.form__box-inner .jq-selectbox li.disabled:hover {
+	background: none;
+}
+.form__box-inner .jq-selectbox li.optgroup {
+	font-weight: bold;
+}
+.form__box-inner .jq-selectbox li.optgroup:hover {
+	background: none;
+	color: #231F20;
+	cursor: default;
+}
+.form__box-inner .jq-selectbox li.option {
+	padding-left: 25px;
+}
+/* .form__box-inner select {
+    margin-bottom: 8px; 
+    height: 40px;
+    padding-left: 15px;
+    border: 1px solid #e6e6e6;
+} */
+.form__box-inner textarea {
+    height: 196px;
+    resize: none;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+.form__box-left button {
+    color: #303030;
+    margin-top: 36px;
+    float: right;
+    background-color: #fff;
+}
+
+
+
